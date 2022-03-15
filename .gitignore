@@ -1,0 +1,50 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.a
+
+# VectorCAST specific files #
+#################################
+*.QIK
+
+# directories #
+###################
+/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build/**
+/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/constants/**
+/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/data/**
+/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/lock/**
+/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/logs/**
+/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/python/__pycache__/**
+/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/*.vcw
+/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/*.db
+/Workflow_Training/lua-5.3.5/vcast_working/MinGW_Template/LAPI/**
+/Workflow_Training/lua-5.3.5/vcast_working/MinGW_Template/CCAST_.CFG
+/Workflow_Training/lua-5.3.5/vcast_working/MinGW_Template/*.vce
+
+
+
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
