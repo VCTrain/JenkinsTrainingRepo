@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="31">
+  <config>
+    <config>
+      <key>WHITEBOX</key>
+      <value>YES</value>
+      <key>COVERAGE_TYPE</key>
+      <value>STATEMENT+BRANCH</value>
+    </config>
+    <search-directory type="TESTABLE_SOURCE_DIR">$(VCAST_SRC_BASE)</search-directory>
+    <saved-logs>5</saved-logs>
+    <build-directory-naming-strategy>COMPRESSED</build-directory-naming-strategy>
+  </config>
+  <project-id>1647370387</project-id>
+  <factor-config-options>1</factor-config-options>
+  <environment name="LAPI" type="UNIT">
+    <language>1</language>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>MinGW_Template</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="LAUXLIB" type="UNIT">
+    <language>1</language>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>Lua_Testing/build/812841817</original-environment-directory>
+    </config>
+  </environment>
+  <group name="UnitTestGroup">
+    <environment name="LAPI"/>
+    <environment name="LAUXLIB"/>
+  </group>
+  <compiler>
+    <compiler>
+      <name>GNU_Native_Manual__32-bit__9.x_9.2_C</name>
+      <config>
+        <config>
+          <key>C_COMPILER_TAG</key>
+          <value>GNU_C_92</value>
+          <key>C_DEFINE_LIST</key>
+          <value>LUA_COMPAT_5_2</value>
+          <key>C_PREPROCESS_CMD</key>
+          <value>gcc -E -ftrack-macro-expansion=0 -C -std=gnu99 -O2 -Wall -Wextra</value>
+          <key>C_COMPILE_CMD</key>
+          <value>gcc -c -g -std=gnu99 -O2 -Wall -Wextra</value>
+          <key>C_LINK_CMD</key>
+          <value>gcc -g -std=gnu99</value>
+          <key>C_LINK_OPTIONS</key>
+          <value>-lm</value>
+          <key>VCAST_ASSEMBLY_FILE_EXTENSIONS</key>
+          <value>asm s</value>
+        </config>
+      </config>
+    </compiler>
+    <testsuite name="UnitTestSuite">
+      <group name="UnitTestGroup"/>
+    </testsuite>
+  </compiler>
+  <search-directory type="TESTABLE_SOURCE_DIR">C:\VCAST\Jenkins_Test\GitHub\JenkinsTrainingRepo\Workflow_Training\lua-5.3.5\vcast_working\MinGW_Template</search-directory>
+</project>

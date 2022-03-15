@@ -1,0 +1,42 @@
+make: Entering directory `/c/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/src'
+rm -f liblua.a lua luac lapi.o lcode.o lctype.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o lmem.o lobject.o lopcodes.o lparser.o lstate.o lstring.o ltable.o ltm.o lundump.o lvm.o lzio.o lauxlib.o lbaselib.o lbitlib.o lcorolib.o ldblib.o liolib.o lmathlib.o loslib.o lstrlib.o ltablib.o lutf8lib.o loadlib.o linit.o  lua.o luac.o
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lapi.o lapi.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lcode.o lcode.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lctype.o lctype.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o ldebug.o ldebug.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o ldo.o ldo.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o ldump.o ldump.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lfunc.o lfunc.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lgc.o lgc.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o llex.o llex.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lmem.o lmem.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lobject.o lobject.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lopcodes.o lopcodes.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lparser.o lparser.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lstate.o lstate.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lstring.o lstring.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o ltable.o ltable.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o ltm.o ltm.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lundump.o lundump.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lvm.o lvm.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lzio.o lzio.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lauxlib.o lauxlib.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lbaselib.o lbaselib.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lbitlib.o lbitlib.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lcorolib.o lcorolib.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o ldblib.o ldblib.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o liolib.o liolib.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lmathlib.o lmathlib.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o loslib.o loslib.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lstrlib.o lstrlib.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o ltablib.o ltablib.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lutf8lib.o lutf8lib.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o loadlib.o loadlib.c
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o linit.o linit.c
+ar rcu liblua.a lapi.o lcode.o lctype.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o lmem.o lobject.o lopcodes.o lparser.o lstate.o lstring.o ltable.o ltm.o lundump.o lvm.o lzio.o lauxlib.o lbaselib.o lbitlib.o lcorolib.o ldblib.o liolib.o lmathlib.o loslib.o lstrlib.o ltablib.o lutf8lib.o loadlib.o linit.o 
+ranlib liblua.a
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o lua.o lua.c
+gcc -std=gnu99 -o lua   lua.o liblua.a -lm  
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2     -c -o luac.o luac.c
+gcc -std=gnu99 -o luac   luac.o liblua.a -lm  
+make: Leaving directory `/c/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/src'
