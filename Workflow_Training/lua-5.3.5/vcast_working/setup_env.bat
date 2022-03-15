@@ -11,9 +11,9 @@ REM VECTOR_LICENSE_FILE - Environment variable pointing to the license file
 SET VECTOR_LICENSE_FILE=27000@localhost
 
 REM Compiler specific envioronment variables
-SET MINGW_BASE_DIR=
-SET MINGW_COMPILER_DIR=
-SET MINGW_MAKE_DIR=
+SET MINGW_BASE_DIR=C:\MinGW
+SET MINGW_COMPILER_DIR=%MINGW_BASE_DIR%\bin
+SET MINGW_MAKE_DIR=%MINGW_BASE_DIR%\msys\1.0\bin
 
 REM VCAST_SRC_BASE - Environment variable pointing to the source code base directory
 SET VCAST_SRC_BASE=%SETUP_DIR%\..\src
@@ -38,4 +38,4 @@ REM FOR %%F IN (%VCAST_COMPILER_DIR%) DO SET VCAST_COMPILER_DIR=%%~sF
 REM ------------------
 
 REM PATH - Update the PATH environment variable
-SET PATH=%VECTORCAST_DIR%;%PATH%
+SET PATH=%MINGW_COMPILER_DIR%;%MINGW_MAKE_DIR%;%VECTORCAST_DIR%;%PATH%
