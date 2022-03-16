@@ -27,9 +27,17 @@
       <original-environment-directory>Lua_Testing/build/812841817</original-environment-directory>
     </config>
   </environment>
+  <environment name="LBASELIB" type="UNIT">
+    <language>1</language>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>Lua_Testing/build/505375537</original-environment-directory>
+    </config>
+  </environment>
   <group name="UnitTestGroup">
     <environment name="LAPI"/>
     <environment name="LAUXLIB"/>
+    <environment name="LBASELIB"/>
   </group>
   <compiler>
     <compiler>
