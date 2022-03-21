@@ -34,6 +34,19 @@
       <original-environment-directory>Lua_Testing/build/505375537</original-environment-directory>
     </config>
   </environment>
+  <environment name="Lua_System_Testing" type="COVER">
+    <system-test-module>Lua_System_Testing_system_tests</system-test-module>
+    <system-test-template>default</system-test-template>
+    <language>1</language>
+    <is-monitored>0</is-monitored>
+    <config>
+      <apply-inst>BUILD</apply-inst>
+      <original-environment-directory>Lua_Testing/build/3417293175</original-environment-directory>
+    </config>
+  </environment>
+  <group name="SystemTestGroup">
+    <environment name="Lua_System_Testing"/>
+  </group>
   <group name="UnitTestGroup">
     <environment name="LAPI"/>
     <environment name="LAUXLIB"/>
@@ -61,6 +74,9 @@
         </config>
       </config>
     </compiler>
+    <testsuite name="SystemTestSuite">
+      <group name="SystemTestGroup"/>
+    </testsuite>
     <testsuite name="UnitTestSuite">
       <group name="UnitTestGroup"/>
     </testsuite>

@@ -11,6 +11,7 @@
 # VectorCAST specific files #
 #################################
 *.QIK
+*.DAT
 
 # directories #
 ###################

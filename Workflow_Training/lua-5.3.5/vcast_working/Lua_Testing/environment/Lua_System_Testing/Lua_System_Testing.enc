@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cover>
+ <version>1</version>
+ <options>
+  <name>Lua_System_Testing</name>
+  <coverage>STATEMENT_BRANCH</coverage>
+ </options>
+ <base>
+  <name>SourceRoot</name>
+  <path>$(VCAST_SRC_BASE)</path>
+  <wl>.</wl>
+ </base>
+ <source>
+  <regressionable_path>
+   <base>SourceRoot</base>
+   <subpath>lua.c</subpath>
+  </regressionable_path>
+  <append_cover_io>true</append_cover_io>
+ </source>
+ <source>
+  <regressionable_path>
+   <base>SourceRoot</base>
+   <subpath>luac.c</subpath>
+  </regressionable_path>
+  <append_cover_io>true</append_cover_io>
+ </source>
+</cover>
+
