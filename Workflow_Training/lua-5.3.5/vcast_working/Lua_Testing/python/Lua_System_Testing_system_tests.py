@@ -54,7 +54,10 @@ class SystemTestsConfiguration:
 
         # List of TestCase to run against the instrumented executable
         # For example: self.masterListOfTestCases = [TestCase('Test1'), TestCase('Test2')]
-        self.masterListOfTestCases = [ TestCase( os.environ['VCAST_SYS_TEST_SCRIPTS'] + '\constructs.lua' ) ]
+        self.masterListOfTestCases = [ TestCase( 'constructs.lua' ),
+                                       TestCase( 'literals.lua' ),
+                                       TestCase( 'goto.lua' ),
+                                       TestCase( 'locals.lua' ) ]
 
         # If you have your instrumented application configured to use file output
         # The coverage data will be in the TESTINSS.DAT file after the test is run
@@ -83,7 +86,7 @@ class SystemTestsConfiguration:
 
         By default, we invoke commandToRunTest and pass it a TestCase
         '''
-        return './' + self.nameOfTestExecutable + ' ' + test_case.get_name()
+        return './' + self.nameOfTestExecutable + ' ' + os.path.join( os.environ['VCAST_SYS_TEST_SCRIPTS'], test_case.get_name() )
 
     def interpretTestResults(self, testName, returnCode):
         '''
