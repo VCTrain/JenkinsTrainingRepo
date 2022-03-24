@@ -1,4 +1,4 @@
--- VectorCAST 21.sp6 (01/11/22)
+-- VectorCAST 21.sp7 (03/16/22)
 -- Test Case Script
 --
 -- Environment    : LAPI
@@ -709,6 +709,7 @@ This is an automatically generated test case.
       Cannot set res due to assignment
 TEST.END_NOTES:
 TEST.VALUE:lapi.lua_checkstack.L:<<malloc 1>>
+TEST.VALUE:lapi.lua_checkstack.L[0].ci:<<malloc 1>>
 TEST.VALUE:lapi.lua_checkstack.L[0].ci[0].top:<<malloc 1>>
 TEST.VALUE:lapi.lua_checkstack.n:<<MAX>>
 TEST.END
@@ -752,6 +753,7 @@ This is an automatically generated test case.
       Cannot set res due to assignment
 TEST.END_NOTES:
 TEST.VALUE:lapi.lua_checkstack.L:<<malloc 1>>
+TEST.VALUE:lapi.lua_checkstack.L[0].ci:<<malloc 1>>
 TEST.VALUE:lapi.lua_checkstack.L[0].ci[0].top:<<malloc 1>>
 TEST.VALUE:lapi.lua_checkstack.n:<<MAX>>
 TEST.END
@@ -771,6 +773,7 @@ This is an automatically generated test case.
       Cannot set res due to assignment
 TEST.END_NOTES:
 TEST.VALUE:lapi.lua_checkstack.L:<<malloc 1>>
+TEST.VALUE:lapi.lua_checkstack.L[0].ci:<<malloc 1>>
 TEST.VALUE:lapi.lua_checkstack.L[0].ci[0].top:<<malloc 1>>
 TEST.VALUE:lapi.lua_checkstack.n:<<MIN>>
 TEST.END
@@ -999,6 +1002,7 @@ This is an automatically generated test case.
 TEST.END_NOTES:
 TEST.STUB:lapi.index2addr
 TEST.VALUE:lapi.index2addr.return:<<malloc 1>>
+TEST.VALUE:lapi.index2addr.return[0].value_.gc:<<malloc 1>>
 TEST.VALUE:lapi.index2addr.return[0].value_.gc[0].marked:0
 TEST.VALUE:lapi.index2addr.return[0].tt_:0
 TEST.VALUE:lapi.lua_copy.L:<<malloc 1>>
@@ -1021,6 +1025,7 @@ This is an automatically generated test case.
 TEST.END_NOTES:
 TEST.STUB:lapi.index2addr
 TEST.VALUE:lapi.index2addr.return:<<malloc 1>>
+TEST.VALUE:lapi.index2addr.return[0].value_.gc:<<malloc 1>>
 TEST.VALUE:lapi.index2addr.return[0].value_.gc[0].marked:3
 TEST.VALUE:lapi.index2addr.return[0].tt_:64
 TEST.VALUE:lapi.lua_copy.L:<<malloc 1>>
@@ -1548,6 +1553,7 @@ This is an automatically generated test case.
       Cannot set switch condition (obj->tt_ & 0xf) in branch 2
 TEST.END_NOTES:
 TEST.VALUE:lapi.lua_getmetatable.L:<<malloc 1>>
+TEST.VALUE:lapi.lua_getmetatable.L[0].l_G:<<malloc 1>>
 TEST.VALUE:lapi.lua_getmetatable.L[0].l_G[0].mt[0]:<<null>>
 TEST.VALUE:lapi.lua_getmetatable.objindex:<<MIN>>
 TEST.END
@@ -1570,6 +1576,7 @@ This is an automatically generated test case.
 TEST.END_NOTES:
 TEST.VALUE:lapi.lua_getmetatable.L:<<malloc 1>>
 TEST.VALUE:lapi.lua_getmetatable.L[0].top:<<malloc 1>>
+TEST.VALUE:lapi.lua_getmetatable.L[0].l_G:<<malloc 1>>
 TEST.VALUE:lapi.lua_getmetatable.L[0].l_G[0].mt[0]:<<malloc 1>>
 TEST.VALUE:lapi.lua_getmetatable.objindex:<<MIN>>
 TEST.END
@@ -3032,6 +3039,7 @@ This is an automatically generated test case.
       Cannot set mt due to assignment
 TEST.END_NOTES:
 TEST.VALUE:lapi.index2addr.return:<<malloc 1>>
+TEST.VALUE:lapi.index2addr.return[0].value_.gc:<<malloc 1>>
 TEST.VALUE:lapi.index2addr.return[0].value_.gc[0].marked:0
 TEST.VALUE:lapi.lua_setmetatable.L:<<malloc 1>>
 TEST.VALUE:lapi.lua_setmetatable.objindex:<<MIN>>
@@ -3056,6 +3064,7 @@ This is an automatically generated test case.
       Cannot set mt due to assignment
 TEST.END_NOTES:
 TEST.VALUE:lapi.index2addr.return:<<malloc 1>>
+TEST.VALUE:lapi.index2addr.return[0].value_.gc:<<malloc 1>>
 TEST.VALUE:lapi.index2addr.return[0].value_.gc[0].marked:4
 TEST.VALUE:lapi.lua_setmetatable.L:<<malloc 1>>
 TEST.VALUE:lapi.lua_setmetatable.objindex:<<MIN>>
@@ -3427,6 +3436,8 @@ This is an automatically generated test case.
       Cannot set local variable iu in branch 1
       Cannot set variable io in branch 1 since it requires user code.
 TEST.END_NOTES:
+TEST.VALUE:lapi.index2addr.return:<<malloc 1>>
+TEST.VALUE:lapi.index2addr.return[0].value_.gc:<<malloc 1>>
 TEST.VALUE:lapi.index2addr.return[0].value_.gc[0].marked:0
 TEST.VALUE:lapi.lua_setuservalue.L:<<malloc 1>>
 TEST.VALUE:lapi.lua_setuservalue.idx:<<MIN>>
@@ -3446,6 +3457,8 @@ This is an automatically generated test case.
       Cannot set local variable iu in branch 1
       Cannot set variable io in branch 1 since it requires user code.
 TEST.END_NOTES:
+TEST.VALUE:lapi.index2addr.return:<<malloc 1>>
+TEST.VALUE:lapi.index2addr.return[0].value_.gc:<<malloc 1>>
 TEST.VALUE:lapi.index2addr.return[0].value_.gc[0].marked:4
 TEST.VALUE:lapi.lua_setuservalue.L:<<malloc 1>>
 TEST.VALUE:lapi.lua_setuservalue.idx:<<MIN>>
@@ -4309,6 +4322,7 @@ This is an automatically generated test case.
       Cannot set variable to unknown value in branch 1
 TEST.END_NOTES:
 TEST.VALUE:lapi.getupvalref.return:<<malloc 1>>
+TEST.VALUE:lapi.getupvalref.return[0]:<<malloc 1>>
 TEST.VALUE:lapi.getupvalref.return[0][0].v:<<malloc 1>>
 TEST.VALUE:lapi.getupvalref.return[0][0].v[0].tt_:<<NULL>>
 TEST.VALUE:lapi.lua_upvaluejoin.L:<<malloc 1>>
@@ -4324,9 +4338,10 @@ TEST.SUBPROGRAM:lua_upvaluejoin
 TEST.NEW
 TEST.NAME:BASIS-PATH-002-PARTIAL
 TEST.IMPORT_FAILURES:
-(E) @LINE: 4276 TEST.VALUE:lapi.getupvalref.return[0].v.tt_:<<malloc 1>>
-    >>> Invalid data value: '<<malloc 1>>'
-    >>>    Value Set to 0!
+(E) Errors from previous script import(s)
+    >>> (E) @LINE: 4276 TEST.VALUE:lapi.getupvalref.return[0].v.tt_:<<malloc 1>>
+    >>>     >>> Invalid data value: '<<malloc 1>>'
+    >>>     >>>    Value Set to 0!
 TEST.END_IMPORT_FAILURES:
 TEST.BASIS_PATH:2 of 3 (partial)
 TEST.NOTES:
@@ -4339,6 +4354,8 @@ This is an automatically generated test case.
       Cannot set variable to unknown value in branch 2
 TEST.END_NOTES:
 TEST.VALUE:lapi.getupvalref.return:<<malloc 1>>
+TEST.VALUE:lapi.getupvalref.return[0]:<<malloc 1>>
+TEST.VALUE:lapi.getupvalref.return[0][0].v:<<malloc 1>>
 TEST.VALUE:lapi.getupvalref.return[0][0].v[0].tt_:0
 TEST.VALUE:lapi.lua_upvaluejoin.L:<<malloc 1>>
 TEST.VALUE:lapi.lua_upvaluejoin.fidx1:<<MIN>>
@@ -4361,6 +4378,7 @@ This is an automatically generated test case.
    Test Case Generation Notes:
 TEST.END_NOTES:
 TEST.VALUE:lapi.getupvalref.return:<<malloc 1>>
+TEST.VALUE:lapi.getupvalref.return[0]:<<malloc 1>>
 TEST.VALUE:lapi.getupvalref.return[0][0].v:<<malloc 1>>
 TEST.VALUE:lapi.getupvalref.return[0][0].v[0].tt_:<<NULL>>
 TEST.VALUE:lapi.lua_upvaluejoin.L:<<malloc 1>>
