@@ -41,6 +41,13 @@
       <original-environment-directory>Lua_Testing/build/1495289036</original-environment-directory>
     </config>
   </environment>
+  <environment name="LCODE" type="UNIT">
+    <language>1</language>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>Lua_Testing/build/2464706697</original-environment-directory>
+    </config>
+  </environment>
   <environment name="Lua_System_Testing" type="COVER">
     <system-test-module>Lua_System_Testing_system_tests</system-test-module>
     <system-test-template>default</system-test-template>
@@ -59,6 +66,7 @@
     <environment name="LAUXLIB"/>
     <environment name="LBASELIB"/>
     <environment name="LBITLIB"/>
+    <environment name="LCODE"/>
   </group>
   <compiler>
     <compiler>
