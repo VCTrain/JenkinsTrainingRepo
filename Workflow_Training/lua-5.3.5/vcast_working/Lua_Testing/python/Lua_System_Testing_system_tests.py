@@ -58,7 +58,8 @@ class SystemTestsConfiguration:
                                        TestCase( 'literals.lua' ),
                                        TestCase( 'goto.lua' ),
                                        TestCase( 'locals.lua' ),
-                                       TestCase( 'bitwise.lua' ) ]
+                                       TestCase( 'bitwise.lua' ),
+                                       TestCase( 'calls.lua' ) ]
 
         # If you have your instrumented application configured to use file output
         # The coverage data will be in the TESTINSS.DAT file after the test is run
