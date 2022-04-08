@@ -102,6 +102,18 @@
       <group name="SystemTestGroup"/>
     </testsuite>
     <testsuite name="UnitTestSuite">
+      <config>
+        <config>
+          <key>LINT_EXECUTABLE_PATH</key>
+          <value>C:/PCLint_Plus/windows/pclp64.exe</value>
+          <key>LINT_COMMAND_LINE_OPTIONS</key>
+          <value>-b -e534</value>
+          <key>LINT_OPTION_FILES</key>
+          <value>$(VCAST_SUPPORT_FILES)/co-gcc.lnt</value>
+          <key>LINT_ADDITIONAL_DIRECTORIES</key>
+          <value>$(VCAST_SUPPORT_FILES)</value>
+        </config>
+      </config>
       <group name="UnitTestGroup"/>
     </testsuite>
   </compiler>
