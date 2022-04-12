@@ -29,6 +29,9 @@ FOR %%F IN ("%VCAST_PROJ_BASE%\*.vcm") DO SET VCAST_PROJ_NAME=%%~nF
 REM VCAST_SUPPORT_FILES - Environment variable pointing to the directory for the support files
 SET VCAST_SUPPORT_FILES=%SETUP_DIR%\SupportFiles
 
+REM PYTHONPATH environment varible for Squore libraries
+SET PYTHONPATH=C:\Vector\Squore\pysquore_22
+
 REM (Optional) Disable license look through registry entries for all FlexLM licenses
 REM SET LM_APP_DISABLE_CACHE_READ=1
 

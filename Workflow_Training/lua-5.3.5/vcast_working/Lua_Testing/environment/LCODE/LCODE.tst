@@ -41,6 +41,7 @@ TEST.VALUE:lcode.addk.fs[0].f[0].sizek:<<MAX>>
 TEST.VALUE:lcode.addk.fs[0].ls:<<malloc 1>>
 TEST.VALUE:lcode.addk.key:<<malloc 1>>
 TEST.VALUE:lcode.addk.v:<<malloc 1>>
+TEST.VALUE:lcode.addk.v[0].value_.gc:<<malloc 1>>
 TEST.VALUE:lcode.addk.v[0].value_.gc[0].marked:0
 TEST.VALUE:lcode.addk.v[0].tt_:0
 TEST.VALUE:uut_prototype_stubs.luaH_set.return:<<malloc 1>>
@@ -70,6 +71,7 @@ TEST.VALUE:lcode.addk.fs[0].f[0].sizek:<<MAX>>
 TEST.VALUE:lcode.addk.fs[0].ls:<<malloc 1>>
 TEST.VALUE:lcode.addk.key:<<malloc 1>>
 TEST.VALUE:lcode.addk.v:<<malloc 1>>
+TEST.VALUE:lcode.addk.v[0].value_.gc:<<malloc 1>>
 TEST.VALUE:lcode.addk.v[0].value_.gc[0].marked:3
 TEST.VALUE:lcode.addk.v[0].tt_:64
 TEST.VALUE:uut_prototype_stubs.luaH_set.return:<<malloc 1>>
@@ -99,6 +101,7 @@ TEST.VALUE:lcode.addk.fs[0].f[0].sizek:<<MAX>>
 TEST.VALUE:lcode.addk.fs[0].ls:<<malloc 1>>
 TEST.VALUE:lcode.addk.key:<<malloc 1>>
 TEST.VALUE:lcode.addk.v:<<malloc 1>>
+TEST.VALUE:lcode.addk.v[0].value_.gc:<<malloc 1>>
 TEST.VALUE:lcode.addk.v[0].value_.gc[0].marked:0
 TEST.VALUE:lcode.addk.v[0].tt_:0
 TEST.VALUE:uut_prototype_stubs.luaH_set.return:<<malloc 1>>
@@ -129,6 +132,7 @@ TEST.VALUE:lcode.addk.fs[0].f[0].sizek:<<MIN>>
 TEST.VALUE:lcode.addk.fs[0].ls:<<malloc 1>>
 TEST.VALUE:lcode.addk.key:<<malloc 1>>
 TEST.VALUE:lcode.addk.v:<<malloc 1>>
+TEST.VALUE:lcode.addk.v[0].value_.gc:<<malloc 1>>
 TEST.VALUE:lcode.addk.v[0].value_.gc[0].marked:0
 TEST.VALUE:lcode.addk.v[0].tt_:0
 TEST.VALUE:uut_prototype_stubs.luaH_set.return:<<malloc 1>>
@@ -185,6 +189,7 @@ TEST.VALUE:lcode.addk.fs[0].ls:<<malloc 1>>
 TEST.VALUE:lcode.addk.fs[0].nk:<<MIN>>
 TEST.VALUE:lcode.addk.key:<<malloc 1>>
 TEST.VALUE:lcode.addk.v:<<malloc 1>>
+TEST.VALUE:lcode.addk.v[0].value_.gc:<<malloc 1>>
 TEST.VALUE:lcode.addk.v[0].value_.gc[0].marked:0
 TEST.VALUE:lcode.addk.v[0].tt_:0
 TEST.VALUE:uut_prototype_stubs.luaH_set.return:<<malloc 1>>
@@ -1234,38 +1239,29 @@ TEST.END
 
 -- Subprogram: getjump
 
--- Test Case: BASIS-PATH-001-PARTIAL
+-- Test Case: offset_!=_-1
 TEST.UNIT:lcode
 TEST.SUBPROGRAM:getjump
 TEST.NEW
-TEST.NAME:BASIS-PATH-001-PARTIAL
-TEST.BASIS_PATH:1 of 2 (partial)
-TEST.NOTES:
-This is an automatically generated test case.
-   Test Path 1
-      (1) if (offset == -1) ==> TRUE
-   Test Case Generation Notes:
-      Cannot set local variable offset in branch 1
-TEST.END_NOTES:
+TEST.NAME:offset_!=_-1
+TEST.VALUE:<<OPTIONS>>.REFERENCED_GLOBALS:TRUE
 TEST.VALUE:lcode.getjump.fs:<<malloc 1>>
-TEST.VALUE:lcode.getjump.pc:<<MIN>>
+TEST.VALUE:lcode.getjump.fs[0].f:<<malloc 1>>
+TEST.VALUE:lcode.getjump.fs[0].f[0].code:<<malloc 1>>
+TEST.EXPECTED:lcode.getjump.pc:0
 TEST.END
 
--- Test Case: BASIS-PATH-002-PARTIAL
+-- Test Case: return_NO_JUMP
 TEST.UNIT:lcode
 TEST.SUBPROGRAM:getjump
 TEST.NEW
-TEST.NAME:BASIS-PATH-002-PARTIAL
-TEST.BASIS_PATH:2 of 2 (partial)
-TEST.NOTES:
-This is an automatically generated test case.
-   Test Path 2
-      (1) if (offset == -1) ==> FALSE
-   Test Case Generation Notes:
-      Cannot set local variable offset in branch 1
-TEST.END_NOTES:
+TEST.NAME:return_NO_JUMP
+TEST.VALUE:<<OPTIONS>>.REFERENCED_GLOBALS:TRUE
 TEST.VALUE:lcode.getjump.fs:<<malloc 1>>
-TEST.VALUE:lcode.getjump.pc:<<MIN>>
+TEST.VALUE:lcode.getjump.fs[0].f:<<malloc 1>>
+TEST.VALUE:lcode.getjump.fs[0].f[0].code:<<malloc 1>>
+TEST.VALUE:lcode.getjump.fs[0].f[0].code[0]:100000
+TEST.EXPECTED:lcode.getjump.pc:0
 TEST.END
 
 -- Subprogram: getjumpcontrol
@@ -2696,152 +2692,14 @@ TEST.END
 
 -- Subprogram: luaK_nil
 
--- Test Case: BASIS-PATH-001
+-- Test Case: luaK_nil.001
 TEST.UNIT:lcode
 TEST.SUBPROGRAM:luaK_nil
 TEST.NEW
-TEST.NAME:BASIS-PATH-001
-TEST.BASIS_PATH:1 of 6
-TEST.NOTES:
-This is an automatically generated test case.
-   Test Path 1
-      (1) if (fs->pc > fs->lasttarget) ==> FALSE
-   Test Case Generation Notes:
-TEST.END_NOTES:
+TEST.NAME:luaK_nil.001
 TEST.VALUE:lcode.luaK_nil.fs:<<malloc 1>>
-TEST.VALUE:lcode.luaK_nil.fs[0].pc:<<MIN>>
-TEST.VALUE:lcode.luaK_nil.fs[0].lasttarget:<<MAX>>
-TEST.VALUE:lcode.luaK_nil.from:<<MIN>>
-TEST.VALUE:lcode.luaK_nil.n:<<MIN>>
-TEST.END
-
--- Test Case: BASIS-PATH-002
-TEST.UNIT:lcode
-TEST.SUBPROGRAM:luaK_nil
-TEST.NEW
-TEST.NAME:BASIS-PATH-002
-TEST.BASIS_PATH:2 of 6
-TEST.NOTES:
-This is an automatically generated test case.
-   Test Path 2
-      (1) if (fs->pc > fs->lasttarget) ==> TRUE
-      (2) if ((OpCode)(*previous >> 0 & ~(~((Instruction)0) << 6) << 0) == (OP_LOADNIL)) ==> FALSE
-   Test Case Generation Notes:
-TEST.END_NOTES:
-TEST.VALUE:lcode.luaK_nil.fs:<<malloc 1>>
-TEST.VALUE:lcode.luaK_nil.fs[0].pc:<<MAX>>
-TEST.VALUE:lcode.luaK_nil.fs[0].lasttarget:<<MIN>>
-TEST.VALUE:lcode.luaK_nil.from:<<MIN>>
-TEST.VALUE:lcode.luaK_nil.n:<<MIN>>
-TEST.END
-
--- Test Case: BASIS-PATH-003-PARTIAL
-TEST.UNIT:lcode
-TEST.SUBPROGRAM:luaK_nil
-TEST.NEW
-TEST.NAME:BASIS-PATH-003-PARTIAL
-TEST.BASIS_PATH:3 of 6 (partial)
-TEST.NOTES:
-This is an automatically generated test case.
-   Test Path 3
-      (1) if (fs->pc > fs->lasttarget) ==> TRUE
-      (2) if ((OpCode)(*previous >> 0 & ~(~((Instruction)0) << 6) << 0) == (OP_LOADNIL)) ==> TRUE
-      (3) if (pfrom <= from && from <= pl + 1 || from <= pfrom && pfrom <= l + 1) ==> TRUE
-      (4) if (pfrom < from) ==> FALSE
-      (5) if (pl > l) ==> FALSE
-   Test Case Generation Notes:
-      Cannot set local variable previous in branch 3
-      Cannot set variable TEST.VALUE:lcode.luaK_nil.from: in branch 3 to unknown value
-      Cannot set local variable pfrom in branch 3
-      Cannot set local variable pl in branch 5
-      Cannot set local variable l in branch 5
-      Cannot set local variable previous in branch 6
-TEST.END_NOTES:
-TEST.VALUE:lcode.luaK_nil.fs:<<malloc 1>>
-TEST.VALUE:lcode.luaK_nil.fs[0].pc:<<MAX>>
-TEST.VALUE:lcode.luaK_nil.fs[0].lasttarget:<<MIN>>
-TEST.VALUE:lcode.luaK_nil.from:<<MIN>>
-TEST.VALUE:lcode.luaK_nil.n:<<MIN>>
-TEST.END
-
--- Test Case: BASIS-PATH-004-PARTIAL
-TEST.UNIT:lcode
-TEST.SUBPROGRAM:luaK_nil
-TEST.NEW
-TEST.NAME:BASIS-PATH-004-PARTIAL
-TEST.BASIS_PATH:4 of 6 (partial)
-TEST.NOTES:
-This is an automatically generated test case.
-   Test Path 4
-      (1) if (fs->pc > fs->lasttarget) ==> TRUE
-      (2) if ((OpCode)(*previous >> 0 & ~(~((Instruction)0) << 6) << 0) == (OP_LOADNIL)) ==> TRUE
-      (3) if (pfrom <= from && from <= pl + 1 || from <= pfrom && pfrom <= l + 1) ==> TRUE
-      (4) if (pfrom < from) ==> FALSE
-      (5) if (pl > l) ==> TRUE
-   Test Case Generation Notes:
-      Cannot set local variable previous in branch 3
-      Cannot set variable TEST.VALUE:lcode.luaK_nil.from: in branch 3 to unknown value
-      Cannot set local variable pfrom in branch 3
-      Cannot set local variable pl in branch 5
-      Cannot set local variable l in branch 5
-      Cannot set local variable previous in branch 6
-TEST.END_NOTES:
-TEST.VALUE:lcode.luaK_nil.fs:<<malloc 1>>
-TEST.VALUE:lcode.luaK_nil.fs[0].pc:<<MAX>>
-TEST.VALUE:lcode.luaK_nil.fs[0].lasttarget:<<MIN>>
-TEST.VALUE:lcode.luaK_nil.from:<<MIN>>
-TEST.VALUE:lcode.luaK_nil.n:<<MIN>>
-TEST.END
-
--- Test Case: BASIS-PATH-005-PARTIAL
-TEST.UNIT:lcode
-TEST.SUBPROGRAM:luaK_nil
-TEST.NEW
-TEST.NAME:BASIS-PATH-005-PARTIAL
-TEST.BASIS_PATH:5 of 6 (partial)
-TEST.NOTES:
-This is an automatically generated test case.
-   Test Path 5
-      (1) if (fs->pc > fs->lasttarget) ==> TRUE
-      (2) if ((OpCode)(*previous >> 0 & ~(~((Instruction)0) << 6) << 0) == (OP_LOADNIL)) ==> TRUE
-      (3) if (pfrom <= from && from <= pl + 1 || from <= pfrom && pfrom <= l + 1) ==> TRUE
-      (4) if (pfrom < from) ==> TRUE
-      (5) if (pl > l) ==> FALSE
-   Test Case Generation Notes:
-      Cannot set local variable previous in branch 3
-      Cannot set variable TEST.VALUE:lcode.luaK_nil.from: in branch 3 to unknown value
-      Cannot set local variable pfrom in branch 3
-      Cannot set local variable pl in branch 5
-      Cannot set local variable l in branch 5
-      Cannot set local variable previous in branch 6
-TEST.END_NOTES:
-TEST.VALUE:lcode.luaK_nil.fs:<<malloc 1>>
-TEST.VALUE:lcode.luaK_nil.fs[0].pc:<<MAX>>
-TEST.VALUE:lcode.luaK_nil.fs[0].lasttarget:<<MIN>>
-TEST.VALUE:lcode.luaK_nil.from:<<MAX>>
-TEST.VALUE:lcode.luaK_nil.n:<<MIN>>
-TEST.END
-
--- Test Case: BASIS-PATH-006-PARTIAL
-TEST.UNIT:lcode
-TEST.SUBPROGRAM:luaK_nil
-TEST.NEW
-TEST.NAME:BASIS-PATH-006-PARTIAL
-TEST.BASIS_PATH:6 of 6 (partial)
-TEST.NOTES:
-This is an automatically generated test case.
-   Test Path 6
-      (1) if (fs->pc > fs->lasttarget) ==> TRUE
-      (2) if ((OpCode)(*previous >> 0 & ~(~((Instruction)0) << 6) << 0) == (OP_LOADNIL)) ==> TRUE
-      (3) if (pfrom <= from && from <= pl + 1 || from <= pfrom && pfrom <= l + 1) ==> FALSE
-   Test Case Generation Notes:
-      Cannot set local variable previous in branch 3
-TEST.END_NOTES:
-TEST.VALUE:lcode.luaK_nil.fs:<<malloc 1>>
-TEST.VALUE:lcode.luaK_nil.fs[0].pc:<<MAX>>
-TEST.VALUE:lcode.luaK_nil.fs[0].lasttarget:<<MIN>>
-TEST.VALUE:lcode.luaK_nil.from:<<MAX>>
-TEST.VALUE:lcode.luaK_nil.n:<<MIN>>
+TEST.VALUE:lcode.luaK_nil.fs[0].f:<<malloc 1>>
+TEST.VALUE:lcode.luaK_nil.fs[0].f[0].code:<<malloc 1>>
 TEST.END
 
 -- Subprogram: luaK_numberK
