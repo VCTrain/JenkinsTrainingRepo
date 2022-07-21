@@ -88,7 +88,7 @@ class SystemTestsConfiguration:
 
         By default, we invoke commandToRunTest and pass it a TestCase
         '''
-        return './' + self.nameOfTestExecutable + ' ' + os.path.join( os.environ['VCAST_SYS_TEST_SCRIPTS'], test_case.get_name() )
+        return './' + self.nameOfTestExecutable + ' ' + test_case.get_name()
 
     def interpretTestResults(self, testName, returnCode):
         '''

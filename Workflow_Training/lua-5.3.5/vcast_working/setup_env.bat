@@ -19,8 +19,8 @@ REM VCAST_SRC_BASE - Environment variable pointing to the source code base direc
 SET VCAST_SRC_BASE=%SETUP_DIR%\..\src
 FOR /D %%F IN ("%VCAST_SRC_BASE%") DO SET VCAST_SRC_BASE=%%~fF
 
-SET VCAST_SYS_TEST_SCRIPTS=%SETUP_DIR%\..\..\lua-5.3.4-tests
-FOR /D %%F IN ("%VCAST_SYS_TEST_SCRIPTS%") DO SET VCAST_SYS_TEST_SCRIPTS=%%~fF
+REM SET VCAST_SYS_TEST_SCRIPTS=%SETUP_DIR%\..\..\lua-5.3.4-tests
+REM FOR /D %%F IN ("%VCAST_SYS_TEST_SCRIPTS%") DO SET VCAST_SYS_TEST_SCRIPTS=%%~fF
 
 REM VCAST_PROJ_BASE - Environment variable pointing to the VectorCAST Project working directory
 SET VCAST_PROJ_BASE=%SETUP_DIR%
