@@ -1,4 +1,4 @@
--- VectorCAST 21.sp7 (03/16/22)
+-- VectorCAST 22.sp3 (06/07/22)
 -- Test Case Script
 --
 -- Environment    : LAPI
@@ -318,40 +318,32 @@ TEST.END
 
 -- Subprogram: getupvalref
 
--- Test Case: BASIS-PATH-001
+-- Test Case: getupvalref.001
 TEST.UNIT:lapi
 TEST.SUBPROGRAM:getupvalref
 TEST.NEW
-TEST.NAME:BASIS-PATH-001
-TEST.BASIS_PATH:1 of 2
-TEST.NOTES:
-This is an automatically generated test case.
-   Test Path 1
-      (1) if pf ==> FALSE
-   Test Case Generation Notes:
-TEST.END_NOTES:
+TEST.NAME:getupvalref.001
+TEST.VALUE:<<OPTIONS>>.REFERENCED_GLOBALS:TRUE
+TEST.STUB:lapi.index2addr
+TEST.VALUE:lapi.index2addr.return:<<malloc 1>>
+TEST.VALUE:lapi.index2addr.return[0].value_.f:lua_gettop
 TEST.VALUE:lapi.getupvalref.L:<<malloc 1>>
-TEST.VALUE:lapi.getupvalref.fidx:<<MIN>>
-TEST.VALUE:lapi.getupvalref.n:<<MIN>>
-TEST.VALUE:lapi.getupvalref.pf:<<null>>
+TEST.VALUE:lapi.getupvalref.pf:<<malloc 1>>
+TEST.VALUE:lapi.getupvalref.pf[0]:<<malloc 1>>
 TEST.END
 
--- Test Case: BASIS-PATH-002
+-- Test Case: getupvalref.002
 TEST.UNIT:lapi
 TEST.SUBPROGRAM:getupvalref
 TEST.NEW
-TEST.NAME:BASIS-PATH-002
-TEST.BASIS_PATH:2 of 2
-TEST.NOTES:
-This is an automatically generated test case.
-   Test Path 2
-      (1) if pf ==> TRUE
-   Test Case Generation Notes:
-TEST.END_NOTES:
+TEST.NAME:getupvalref.002
+TEST.VALUE:<<OPTIONS>>.REFERENCED_GLOBALS:TRUE
+TEST.STUB:lapi.index2addr
+TEST.VALUE:lapi.index2addr.return:<<malloc 1>>
+TEST.VALUE:lapi.index2addr.return[0].value_.f:lua_gettop
 TEST.VALUE:lapi.getupvalref.L:<<malloc 1>>
-TEST.VALUE:lapi.getupvalref.fidx:<<MIN>>
-TEST.VALUE:lapi.getupvalref.n:<<MIN>>
 TEST.VALUE:lapi.getupvalref.pf:<<malloc 1>>
+TEST.VALUE:lapi.getupvalref.pf[0]:<<malloc 1>>
 TEST.END
 
 -- Subprogram: growstack
@@ -793,10 +785,12 @@ This is an automatically generated test case.
    Test Case Generation Notes:
       Cannot set variable to unknown value in branch 1
 TEST.END_NOTES:
+TEST.STUB:lapi.index2addr
+TEST.VALUE:lapi.index2addr.return:<<null>>
 TEST.VALUE:lapi.lua_compare.L:<<malloc 1>>
-TEST.VALUE:lapi.lua_compare.index1:<<MIN>>
-TEST.VALUE:lapi.lua_compare.index2:<<MIN>>
-TEST.VALUE:lapi.lua_compare.op:<<MIN>>
+TEST.VALUE:lapi.lua_compare.index1:2
+TEST.VALUE:lapi.lua_compare.index2:2
+TEST.VALUE:lapi.lua_compare.op:1
 TEST.END
 
 -- Test Case: BASIS-PATH-002
@@ -812,6 +806,7 @@ This is an automatically generated test case.
       (5) case op ==> default
    Test Case Generation Notes:
 TEST.END_NOTES:
+TEST.STUB:lapi.index2addr
 TEST.VALUE:lapi.index2addr.return:<<malloc 1>>
 TEST.VALUE:lapi.lua_compare.L:<<malloc 1>>
 TEST.VALUE:lapi.lua_compare.index1:<<MIN>>
@@ -832,6 +827,7 @@ This is an automatically generated test case.
       (2) case op ==> 0
    Test Case Generation Notes:
 TEST.END_NOTES:
+TEST.STUB:lapi.index2addr
 TEST.VALUE:lapi.index2addr.return:<<malloc 1>>
 TEST.VALUE:lapi.lua_compare.L:<<malloc 1>>
 TEST.VALUE:lapi.lua_compare.index1:<<MIN>>
@@ -852,6 +848,7 @@ This is an automatically generated test case.
       (3) case op ==> 1
    Test Case Generation Notes:
 TEST.END_NOTES:
+TEST.STUB:lapi.index2addr
 TEST.VALUE:lapi.index2addr.return:<<malloc 1>>
 TEST.VALUE:lapi.lua_compare.L:<<malloc 1>>
 TEST.VALUE:lapi.lua_compare.index1:<<MIN>>
@@ -872,6 +869,7 @@ This is an automatically generated test case.
       (4) case op ==> 2
    Test Case Generation Notes:
 TEST.END_NOTES:
+TEST.STUB:lapi.index2addr
 TEST.VALUE:lapi.index2addr.return:<<malloc 1>>
 TEST.VALUE:lapi.lua_compare.L:<<malloc 1>>
 TEST.VALUE:lapi.lua_compare.index1:<<MIN>>
@@ -1096,46 +1094,6 @@ TEST.VALUE:lapi.lua_createtable.L[0].l_G:<<malloc 1>>
 TEST.VALUE:lapi.lua_createtable.L[0].l_G[0].GCdebt:<<MIN>>
 TEST.VALUE:lapi.lua_createtable.narray:<<MAX>>
 TEST.VALUE:lapi.lua_createtable.nrec:<<MAX>>
-TEST.END
-
--- Subprogram: lua_dump
-
--- Test Case: BASIS-PATH-001-PARTIAL
-TEST.UNIT:lapi
-TEST.SUBPROGRAM:lua_dump
-TEST.NEW
-TEST.NAME:BASIS-PATH-001-PARTIAL
-TEST.BASIS_PATH:1 of 2 (partial)
-TEST.NOTES:
-This is an automatically generated test case.
-   Test Path 1
-      (1) if (o->tt_ == ((6 | 0 << 4) | 1 << 6)) ==> FALSE
-   Test Case Generation Notes:
-      Cannot set o due to assignment
-      Cannot set local variable o in branch 1
-TEST.END_NOTES:
-TEST.VALUE:lapi.lua_dump.L:<<malloc 1>>
-TEST.VALUE:lapi.lua_dump.data:VECTORCAST_INT1
-TEST.VALUE:lapi.lua_dump.strip:<<MIN>>
-TEST.END
-
--- Test Case: BASIS-PATH-002-PARTIAL
-TEST.UNIT:lapi
-TEST.SUBPROGRAM:lua_dump
-TEST.NEW
-TEST.NAME:BASIS-PATH-002-PARTIAL
-TEST.BASIS_PATH:2 of 2 (partial)
-TEST.NOTES:
-This is an automatically generated test case.
-   Test Path 2
-      (1) if (o->tt_ == ((6 | 0 << 4) | 1 << 6)) ==> TRUE
-   Test Case Generation Notes:
-      Cannot set o due to assignment
-      Cannot set local variable o in branch 1
-TEST.END_NOTES:
-TEST.VALUE:lapi.lua_dump.L:<<malloc 1>>
-TEST.VALUE:lapi.lua_dump.data:VECTORCAST_INT1
-TEST.VALUE:lapi.lua_dump.strip:<<MIN>>
 TEST.END
 
 -- Subprogram: lua_error
@@ -1459,22 +1417,6 @@ TEST.END_NOTES:
 TEST.VALUE:lapi.lua_getallocf.L:<<malloc 1>>
 TEST.VALUE:lapi.lua_getallocf.L[0].l_G:<<malloc 1>>
 TEST.VALUE:lapi.lua_getallocf.ud:<<malloc 1>>
-TEST.END
-
--- Subprogram: lua_getfield
-
--- Test Case: BASIS-PATH-001
-TEST.UNIT:lapi
-TEST.SUBPROGRAM:lua_getfield
-TEST.NEW
-TEST.NAME:BASIS-PATH-001
-TEST.BASIS_PATH:1 of 1
-TEST.NOTES:
-   No branches in subprogram
-TEST.END_NOTES:
-TEST.VALUE:lapi.lua_getfield.L:<<malloc 1>>
-TEST.VALUE:lapi.lua_getfield.idx:<<MIN>>
-TEST.VALUE:lapi.lua_getfield.k:<<malloc 1>>
 TEST.END
 
 -- Subprogram: lua_getglobal
