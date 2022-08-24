@@ -1,4 +1,4 @@
--- VectorCAST 21.sp7 (03/16/22)
+-- VectorCAST 22.sp3 (06/07/22)
 -- Test Case Script
 --
 -- Environment    : LCODE
@@ -209,8 +209,10 @@ TEST.BASIS_PATH:1 of 1
 TEST.NOTES:
    No branches in subprogram
 TEST.END_NOTES:
+TEST.STUB:lcode.addk
 TEST.VALUE:lcode.boolK.fs:<<malloc 1>>
-TEST.VALUE:lcode.boolK.b:<<MIN>>
+TEST.VALUE:lcode.boolK.b:1
+TEST.EXPECTED:lcode.boolK.b:1
 TEST.END
 
 -- Subprogram: code_loadbool

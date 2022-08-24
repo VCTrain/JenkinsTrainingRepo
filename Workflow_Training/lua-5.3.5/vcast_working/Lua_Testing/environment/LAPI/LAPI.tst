@@ -323,8 +323,8 @@ TEST.UNIT:lapi
 TEST.SUBPROGRAM:getupvalref
 TEST.NEW
 TEST.NAME:getupvalref.001
-TEST.VALUE:<<OPTIONS>>.REFERENCED_GLOBALS:TRUE
 TEST.STUB:lapi.index2addr
+TEST.VALUE:<<OPTIONS>>.REFERENCED_GLOBALS:TRUE
 TEST.VALUE:lapi.index2addr.return:<<malloc 1>>
 TEST.VALUE:lapi.index2addr.return[0].value_.f:lua_gettop
 TEST.VALUE:lapi.getupvalref.L:<<malloc 1>>
@@ -337,8 +337,8 @@ TEST.UNIT:lapi
 TEST.SUBPROGRAM:getupvalref
 TEST.NEW
 TEST.NAME:getupvalref.002
-TEST.VALUE:<<OPTIONS>>.REFERENCED_GLOBALS:TRUE
 TEST.STUB:lapi.index2addr
+TEST.VALUE:<<OPTIONS>>.REFERENCED_GLOBALS:TRUE
 TEST.VALUE:lapi.index2addr.return:<<malloc 1>>
 TEST.VALUE:lapi.index2addr.return[0].value_.f:lua_gettop
 TEST.VALUE:lapi.getupvalref.L:<<malloc 1>>
