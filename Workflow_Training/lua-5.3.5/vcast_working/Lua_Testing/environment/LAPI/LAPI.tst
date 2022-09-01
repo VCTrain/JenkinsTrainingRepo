@@ -628,12 +628,14 @@ This is an automatically generated test case.
    Test Case Generation Notes:
       Cannot set variable k in branch 1 since it has a type which requires user code.
 TEST.END_NOTES:
+TEST.STUB:lapi.lua_gc
 TEST.VALUE:lapi.lua_callk.L:<<malloc 1>>
 TEST.VALUE:lapi.lua_callk.L[0].ci:<<malloc 1>>
 TEST.VALUE:lapi.lua_callk.L[0].nny:1
 TEST.VALUE:lapi.lua_callk.nargs:<<MIN>>
 TEST.VALUE:lapi.lua_callk.nresults:<<MIN>>
 TEST.VALUE:lapi.lua_callk.ctx:<<MIN>>
+TEST.VALUE:lapi.lua_callk.k:lua_gc
 TEST.END
 
 -- Test Case: BASIS-PATH-002-PARTIAL
@@ -654,32 +656,11 @@ TEST.VALUE:lapi.lua_callk.L:<<malloc 1>>
 TEST.VALUE:lapi.lua_callk.L[0].top:<<malloc 1>>
 TEST.VALUE:lapi.lua_callk.L[0].ci:<<malloc 1>>
 TEST.VALUE:lapi.lua_callk.L[0].ci[0].top:<<null>>
-TEST.VALUE:lapi.lua_callk.L[0].nny:1
+TEST.VALUE:lapi.lua_callk.L[0].nny:0
 TEST.VALUE:lapi.lua_callk.nargs:<<MIN>>
 TEST.VALUE:lapi.lua_callk.nresults:-1
 TEST.VALUE:lapi.lua_callk.ctx:<<MIN>>
-TEST.END
-
--- Test Case: BASIS-PATH-003-PARTIAL
-TEST.UNIT:lapi
-TEST.SUBPROGRAM:lua_callk
-TEST.NEW
-TEST.NAME:BASIS-PATH-003-PARTIAL
-TEST.BASIS_PATH:3 of 3 (partial)
-TEST.NOTES:
-This is an automatically generated test case.
-   Test Path 3
-      (1) if (k != (void *)0 && L->nny == 0) ==> TRUE
-      (2) if (nresults == -1 && L->ci->top < L->top) ==> FALSE
-   Test Case Generation Notes:
-      Cannot set variable k in branch 1 since it has a type which requires user code.
-TEST.END_NOTES:
-TEST.VALUE:lapi.lua_callk.L:<<malloc 1>>
-TEST.VALUE:lapi.lua_callk.L[0].ci:<<malloc 1>>
-TEST.VALUE:lapi.lua_callk.L[0].nny:0
-TEST.VALUE:lapi.lua_callk.nargs:<<MIN>>
-TEST.VALUE:lapi.lua_callk.nresults:<<MIN>>
-TEST.VALUE:lapi.lua_callk.ctx:<<MIN>>
+TEST.VALUE:lapi.lua_callk.k:lua_gc
 TEST.END
 
 -- Subprogram: lua_checkstack

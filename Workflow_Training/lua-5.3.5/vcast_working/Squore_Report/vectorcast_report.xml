@@ -3762,7 +3762,7 @@
          <finding id="R_NO_EXPECTED_RESULTS"/>
          <finding id="R_TEST_NO_REQUIREMENT"/>
       </test_execution>
-      <test_execution fullname="addk/BASIS-PATH-001-PARTIAL" function_name="addk" test_name="BASIS-PATH-001-PARTIAL" passed="False" start_time="1661174918701.901" created="1661174905000.0" failure_reason="" index="1" kind="2" execution_status="EXEC_SUCCESS_FAIL">
+      <test_execution fullname="addk/BASIS-PATH-001-PARTIAL" function_name="addk" test_name="BASIS-PATH-001-PARTIAL" passed="False" start_time="1661187933000.0" created="1661174905000.0" failure_reason="" index="1" kind="2" execution_status="EXEC_SUCCESS_FAIL">
          <key value="GNU_Native_Manual__32-bit__9.x_9.2_C/UnitTestSuite/UnitTestGroup/addk/BASIS-PATH-001-PARTIAL(C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697)"/>
          <info variant="GNU_Native_Manual__32-bit__9.x_9.2_C_UnitTestSuite(C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697)" compiler="GNU_Native_Manual__32-bit__9.x_9.2_C" testsuite="UnitTestSuite" group="UnitTestGroup" env_path="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697"/>
          <finding id="R_BASIS_PATH_DEFAULT_NAME"/>
@@ -3825,11 +3825,10 @@
          <finding id="R_NO_EXPECTED_RESULTS"/>
          <finding id="R_TEST_NO_REQUIREMENT"/>
       </test_execution>
-      <test_execution fullname="boolK/BASIS-PATH-001" function_name="boolK" test_name="BASIS-PATH-001" passed="False" start_time="1661174920214.757" created="1661174905000.0" failure_reason="" index="1" kind="2" execution_status="EXEC_SUCCESS_FAIL">
+      <test_execution fullname="boolK/BASIS-PATH-001" function_name="boolK" test_name="BASIS-PATH-001" passed="True" start_time="1661188540000.0" created="1661174905000.0" failure_reason="" index="1" kind="2" execution_status="EXEC_SUCCESS_PASS">
          <key value="GNU_Native_Manual__32-bit__9.x_9.2_C/UnitTestSuite/UnitTestGroup/boolK/BASIS-PATH-001(C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697)"/>
          <info variant="GNU_Native_Manual__32-bit__9.x_9.2_C_UnitTestSuite(C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697)" compiler="GNU_Native_Manual__32-bit__9.x_9.2_C" testsuite="UnitTestSuite" group="UnitTestGroup" env_path="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697"/>
          <finding id="R_BASIS_PATH_DEFAULT_NAME"/>
-         <finding id="R_NO_EXPECTED_RESULTS"/>
          <finding id="R_TEST_NO_REQUIREMENT"/>
       </test_execution>
       <test_execution fullname="nilK/BASIS-PATH-001" function_name="nilK" test_name="BASIS-PATH-001" passed="False" start_time="1661174920313.449" created="1661174908000.0" failure_reason="" index="1" kind="2" execution_status="EXEC_SUCCESS_FAIL">
@@ -17354,8 +17353,8 @@
          <covered_lines value="429,430,431,433,434,436,437,441,442,445,446,447,448"/>
          <uncovered_lines value="438,449,450,451"/>
          <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/addk" to="luaK_numberK/BASIS-PATH-001"/>
-         <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/addk" to="boolK/BASIS-PATH-001"/>
          <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/addk" to="nilK/BASIS-PATH-001"/>
+         <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/addk" to="addk/BASIS-PATH-001-PARTIAL"/>
          <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/addk" to="luaK_exp2RK/BASIS-PATH-002"/>
          <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/addk" to="luaK_exp2RK/BASIS-PATH-003"/>
          <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/addk" to="luaK_exp2RK/BASIS-PATH-004"/>
@@ -17363,7 +17362,6 @@
          <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/addk" to="luaK_exp2RK/BASIS-PATH-007"/>
          <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/addk" to="discharge2reg/BASIS-PATH-006"/>
          <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/addk" to="discharge2reg/BASIS-PATH-007"/>
-         <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/addk" to="addk/BASIS-PATH-001-PARTIAL"/>
          <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/addk" to="addk/BASIS-PATH-002-PARTIAL"/>
          <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/addk" to="addk/BASIS-PATH-003-PARTIAL"/>
          <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/addk" to="addk/BASIS-PATH-004-PARTIAL"/>
@@ -17398,8 +17396,8 @@
          <covered_lines value="493,494"/>
          <uncovered_lines value=""/>
          <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/boolK" to="luaK_exp2RK/BASIS-PATH-003"/>
-         <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/boolK" to="boolK/BASIS-PATH-001"/>
          <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/boolK" to="luaK_exp2RK/BASIS-PATH-004"/>
+         <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/boolK" to="boolK/BASIS-PATH-001"/>
          <link link_id="TESTED" from="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c/boolK" to="luaK_exp2RK/BASIS-PATH-002"/>
       </function>
       <function name="nilK" file="C:/VCAST/Jenkins_Test/GitHub/JenkinsTrainingRepo/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build\2464706697\LCODE\lcode_inst.c" display_path="C:\VCAST\Jenkins_Test\GitHub\JenkinsTrainingRepo\Workflow_Training\lua-5.3.5\src\lcode.c">
