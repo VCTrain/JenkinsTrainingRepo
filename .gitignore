@@ -16,7 +16,6 @@
 # directories #
 ###################
 /Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/build/**
-/Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/constants/**
 /Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/data/**
 /Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/lock/**
 /Workflow_Training/lua-5.3.5/vcast_working/Lua_Testing/logs/**
